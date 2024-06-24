@@ -17,6 +17,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Type</th>
                     <th>Titolo</th>
                     <th>Descrizione</th>
                     <th>Slug</th>
@@ -27,6 +28,8 @@
                 @foreach ($projects as $project)
                     <tr>
                         <td>{{ $project->id }}</td>
+                        {{-- aggiungo il type e se non c'è '?'' --}}
+                        <td>{{ $project->type?->name }}</td>
                         <td>{{ $project->title }}</td>
                         <td>{{ $project->description }}</td>
                         <td> <a class="btn btn-outline-warning btn-sm btn-details "
