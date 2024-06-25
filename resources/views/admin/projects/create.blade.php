@@ -12,7 +12,7 @@
             {{-- TYPE --}}
             <div class="form-group">
                 <label for="type_id">Type</label>
-                <select id="type_id" name="type_id" class="form-control">
+                <select id="type_id" name="type_id" class="form-control" required>
                     <option value="">Select a type</option>
                     @foreach ($types as $type)
                         <option value="{{ $type->id }}">{{ $type->name }}</option>

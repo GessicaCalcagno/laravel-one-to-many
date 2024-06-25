@@ -16,8 +16,9 @@
                 <label for="type_id">Type</label>
                 <select id="type_id" name="type_id" class="form-control">
                     <option value="">Select a type</option>
+                    {{-- Questa è una query --}}
                     @foreach ($types as $type)
-                        <option @selected($project->type?->id === $type->id) value="{{ $type->id }}">{{ $type->name }}</option>
+                        <option @selected(old('type_id', $project->type?->id === $type->id)) value="{{ $type->id }}">{{ $type->name }}</option>
                     @endforeach
                 </select>
             </div>
